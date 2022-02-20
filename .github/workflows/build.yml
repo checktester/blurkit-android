@@ -33,6 +33,11 @@ jobs:
         with:
           java-version: '11'
 
+      - uses: sparkfabrik/android-build-action@v1.0.0
+        with:
+          project-path: android
+          output-path: my-app.apk
+
       # Only upload artifacts built on Linux
       - name: Upload build artifact
         if: runner.os == 'Linux'
